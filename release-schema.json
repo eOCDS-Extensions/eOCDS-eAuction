@@ -1,29 +1,5 @@
 {
   "definition": {
-    "Tender": {
-      "properties": {
-        "procurementMethodModalitiesDetails": {
-          "title": "Procurement Method Modalities Details",
-          "description": "The prescribed presets of settings and adjustments for the differement procurement methods modalities applied under this contracting process",
-          "type": "object",
-          "properties": {
-            "electronicAuction": {
-              "title": "Electronic Auction Modalities",
-              "description": "The prescribed presets of settings and adjustments available for the electronic auction as one one of the procurement methods modalities applied under this contracting process",
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/electronicAuctionModalities"
-              }
-            }
-          }
-        },
-        "auctionPeriod": {
-          "title": "Auction period",
-          "description": "General auction period for the contracting process",
-          "$ref": "#/definitions/Period"
-        }
-      }
-    },
     "Auctions": {
       "details": {
         "title": "Details",
@@ -189,50 +165,6 @@
         "value": "",
         "unit": {
           "$ref": "#/definitions/Unit"
-        }
-      }
-    },
-    "ElectronicAuctionModalities": {
-      "title": "Electronic Aucton Modalities preset",
-      "description": "The strict preset of settings and adjustments available for the electronic auction as one one of the procurement methods modalities applied under this contracting process",
-      "type": "object",
-      "properties": {
-        "id": {
-          "title": "Identifier",
-          "description": "Unique identifier for this Electronic Aucton Modalities preset",
-          "type": [
-            "string",
-            "integer"
-          ]
-        },
-        "description": {
-          "title": "Description",
-          "description": "Free-text exlanatory description for this Electronic Aucton Modalities preset",
-          "type": "string"
-        },
-        "modalities": {
-          "title": "Modalities",
-          "description": "A set of modalities, providing detailed information on the specific auction",
-          "type": "object",
-          "properties": {
-            "auctionMethod": {
-              "title": "Electroic auction method",
-              "description": "Electroic auction method applied for this stage of the electronic auction",
-              "type": "string",
-              "codelist": "codelists/auctionMethod.csv",
-              "openCodelist": false
-            },
-            "auctionAwardCriteria": {
-              "title": "Electronic auction award criteria",
-              "description": "Primary and secondary criteria of the evaluation of offers received within this stage of the electronic auction",
-              "type": "array",
-              "items": {
-                "type": "string",
-                "codelist": "codelists/auctionAwardCriteria.csv",
-                "openCodelist": false
-              }
-            }
-          }
         }
       }
     }
