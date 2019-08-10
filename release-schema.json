@@ -1,12 +1,5 @@
 {
   "properties":{
-    "tender":{
-      "auctionPeriod": {
-        "title":"Auction period",
-        "description": "General auction period for the contracting process",
-        "$ref": "#/definitions/Period"
-      }
-    },
     "auctions": {
       "details": {
         "title": "Details",
@@ -19,6 +12,13 @@
     }
   },
   "definition": {
+    "Tender":{
+      "auctionPeriod": {
+        "title":"Auction period",
+        "description": "General auction period for the contracting process",
+        "$ref": "#/definitions/Period"
+      }
+    },
     "Auction": {
       "title": "Electronic auction",
       "description": "Data regarding electronic auction established against specific lot",
