@@ -1,6 +1,13 @@
 {
-  "definition": {
-    "Auctions": {
+  "properties":{
+    "tender":{
+      "auctionPeriod": {
+        "title":"Auction period",
+        "description": "General auction period for the contracting process",
+        "$ref": "#/definitions/Period"
+      }
+    },
+    "auctions": {
       "details": {
         "title": "Details",
         "description": "An array of auctions, providing information on the execution",
@@ -9,7 +16,9 @@
           "$ref": "#/definitions/Auction"
         }
       }
-    },
+    }
+  },
+  "definition": {
     "Auction": {
       "title": "Electronic auction",
       "description": "Data regarding electronic auction established against specific lot",
