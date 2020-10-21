@@ -1,0 +1,17 @@
+{
+  "name": {
+    "en": "eAuction"
+  },
+  "description": {
+    "en": "Adds a root object to the schema to describe spepcifics of the electonic auction planned under this procurement process"
+  },
+  "documentationUrl": {
+    "en": "https://github.com/eOCDS-Extensions/eOCDS-eAuction"
+  },
+  "compatibility": [
+    "1.1"
+  ],
+  "schemas": [
+    "release-schema.json"
+  ]
+}
