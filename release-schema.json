@@ -176,6 +176,8 @@
           "description": "...",
           "type": [
             "string",
+            "number",
+            "integer",
             "null"
           ]
         },
