@@ -171,7 +171,14 @@
       "description": "",
       "type": "object",
       "properties": {
-        "value": "",
+        "measure": {
+          "title": "Measure",
+          "description": "...",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "unit": {
           "title":"",
           "description":"",
