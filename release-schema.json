@@ -1,22 +1,26 @@
 {
-  "properties":{
+  "properties": {
     "auctions": {
-      "details": {
-        "title": "Details",
-        "description": "An array of auctions, providing information on the execution",
-        "type": "array",
-        "items": {
-          "$ref": "#/definitions/Auction"
+      "properties": {
+        "details": {
+          "title": "Details",
+          "description": "An array of auctions, providing information on the execution",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Auction"
+          }
         }
       }
     }
   },
   "definitions": {
-    "Tender":{
-      "auctionPeriod": {
-        "title":"Auction period",
-        "description": "General auction period for the contracting process",
-        "$ref": "#/definitions/Period"
+    "Tender": {
+      "properties": {
+        "auctionPeriod": {
+          "title": "Auction period",
+          "description": "General auction period for the contracting process",
+          "$ref": "#/definitions/Period"
+        }
       }
     },
     "Auction": {
@@ -182,41 +186,41 @@
           ]
         },
         "unit": {
-          "title":"",
-          "description":"",
+          "title": "",
+          "description": "",
           "properties": {
             "id": {
-              "description": "The identifier from the codelist referenced in the schema property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure.", 
-              "title": "ID", 
+              "description": "The identifier from the codelist referenced in the schema property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure.",
+              "title": "ID",
               "type": [
-                "string", 
+                "string",
                 "null"
               ]
-            }, 
+            },
             "name": {
-              "description": "The name of the unit.", 
-              "title": "Unit name", 
+              "description": "The name of the unit.",
+              "title": "Unit name",
               "type": [
-                "string", 
+                "string",
                 "null"
               ]
-            }, 
+            },
             "scheme": {
-              "codelist": "unitClassificationScheme.csv", 
-              "description": "The list from which units of measure identifiers are taken. This should be an entry in the unitClassificationScheme codelist. Use of the scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of 'Codes for Units of Measure Used in International Trade' is recommended.", 
-              "openCodelist": true, 
-              "title": "Scheme", 
+              "codelist": "unitClassificationScheme.csv",
+              "description": "The list from which units of measure identifiers are taken. This should be an entry in the unitClassificationScheme codelist. Use of the scheme 'UNCEFACT' for the UN/CEFACT Recommendation 20 list of 'Codes for Units of Measure Used in International Trade' is recommended.",
+              "openCodelist": true,
+              "title": "Scheme",
               "type": [
-                "string", 
+                "string",
                 "null"
               ]
-            }, 
+            },
             "uri": {
-              "description": "If the scheme used provide a machine-readable URI for this unit of measure, this can be given.", 
-              "format": "uri", 
-              "title": "URI", 
+              "description": "If the scheme used provide a machine-readable URI for this unit of measure, this can be given.",
+              "format": "uri",
+              "title": "URI",
               "type": [
-                "string", 
+                "string",
                 "null"
               ]
             }
