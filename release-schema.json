@@ -1,12 +1,14 @@
 {
   "properties":{
     "auctions": {
-      "details": {
-        "title": "Details",
-        "description": "An array of auctions, providing information on the execution",
-        "type": "array",
-        "items": {
-          "$ref": "#/definitions/Auction"
+      "properties": {
+        "details": {
+          "title": "Details",
+          "description": "An array of auctions, providing information on the execution",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Auction"
+          }
         }
       }
     }
