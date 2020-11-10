@@ -67,7 +67,12 @@
               "description": "The result status of this electconic auction based on the auction critera",
               "type": "string",
               "codelist": "codelists/auctionStatus.csv",
-              "openCodelist": false
+              "openCodelist": false,
+              "enum": [
+                "successfull",
+                "unsuccessful",
+                "cancelled"
+              ]
             },
             "bids": {
               "title": "Bids",
