@@ -1,6 +1,7 @@
 {
   "properties": {
     "auctions": {
+      "type": "object",
       "properties": {
         "details": {
           "title": "Details",
@@ -59,19 +60,24 @@
         },
         "auctionResult": {
           "title": "Auction results",
-          "descirption": "Data regarding outcomes of this electronic auction",
+          "description": "Data regarding outcomes of this electronic auction",
           "type": "object",
           "properties": {
             "status": {
               "title": "status",
-              "descrition": "The result status of this electconic auction based on the auction critera",
+              "description": "The result status of this electconic auction based on the auction critera",
               "type": "string",
-              "codelist": "codelists/auctionStatus.csv",
-              "openCodelist": false
+              "codelist": "auctionStatus.csv",
+              "openCodelist": false,
+              "enum": [
+                "successfull",
+                "unsuccessful",
+                "cancelled"
+              ]
             },
             "bids": {
               "title": "Bids",
-              "descrition": "The set of bids resulting this stage of the electronic auction",
+              "description": "The set of bids resulting this stage of the electronic auction",
               "type": "array",
               "items": {
                 "$ref": "#/definitions/Bid"
@@ -88,27 +94,27 @@
       "properties": {
         "id": {
           "title": "Identifier",
-          "desciption": "Unique ID for this stage of the electronic auction",
+          "description": "Unique ID for this stage of the electronic auction",
           "type": "string"
         },
         "title": {
           "title": "Title",
-          "desciption": "The title of this stage of the electronic auction",
+          "description": "The title of this stage of the electronic auction",
           "type": "string"
         },
         "description": {
           "title": "Description",
-          "desciption": "The description of this stage of the electronic auction",
+          "description": "The description of this stage of the electronic auction",
           "type": "string"
         },
         "relatedModalities": {
           "title": "Related modalities",
-          "desciption": "The id of the preset of electronic auction modalities applied for this stage of the electronic auction",
+          "description": "The id of the preset of electronic auction modalities applied for this stage of the electronic auction",
           "type": "string"
         },
         "rounds": {
           "title": "Rounds",
-          "desciption": "The set of rounds arranged under this stage of the electronic auction",
+          "description": "The set of rounds arranged under this stage of the electronic auction",
           "type": "array",
           "items": {
             "$ref": "#/definitions/AuctionRound"
@@ -117,19 +123,19 @@
         "auctionProgress": {
           "type": "array",
           "items": {
-            "#ref": "#/definitions/AuctionRoundProgress"
+            "$ref": "#/definitions/AuctionRoundProgress"
           }
         }
       }
     },
     "AuctionRound": {
       "title": "Round",
-      "desciption": "The athomic element of the electronic auctions' structure",
+      "description": "The athomic element of the electronic auctions' structure",
       "type": "object",
       "properties": {
         "id": {
           "title": "Identifier",
-          "desciption": "The unique identifier for this round",
+          "description": "The unique identifier for this round",
           "type": "string"
         },
         "roundPeriod": {
@@ -158,7 +164,7 @@
           "title": "",
           "description": "",
           "type": "object",
-          "#ref": "#/definitions/Period"
+          "$ref": "#/definitions/Period"
         },
         "bids": {
           "title": "",
