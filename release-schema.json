@@ -12,8 +12,10 @@
           }
         }
       }
-    },
-    "tender": {
+    }
+  },
+  "definitions": {
+    "Tender": {
       "type":"object",
       "properties": {
         "auctionPeriod": {
@@ -22,9 +24,7 @@
           "$ref": "#/definitions/Period"
         }
       }
-    }
-  },
-  "definitions": {
+    },
     "Auction": {
       "title": "Electronic auction",
       "description": "Data regarding electronic auction established against specific lot",
@@ -51,7 +51,7 @@
           "description": "The period of time allocated (spent) for execution of this electronic auction",
           "$ref": "#/definitions/Period"
         },
-        "eligibleMinDifference": {
+        "eligibleMinimumDifference": {
           "title": "",
           "description": "",
           "$ref": "#/definitions/ValueDifference"
@@ -61,7 +61,7 @@
           "description": "",
           "$ref": "#/definitions/ValueDifference"
         },
-        "eligibleMaxDifference": {
+        "eligibleMaximumDifference": {
           "title": "",
           "description": "",
           "$ref": "#/definitions/ValueDifference"
