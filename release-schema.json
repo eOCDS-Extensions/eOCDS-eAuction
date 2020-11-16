@@ -16,7 +16,7 @@
   },
   "definitions": {
     "Tender": {
-      "type":"object",
+      "type": "object",
       "properties": {
         "auctionPeriod": {
           "title": "Auction period",
@@ -210,6 +210,7 @@
         "unit": {
           "title": "",
           "description": "",
+          "type": "object",
           "properties": {
             "id": {
               "description": "The identifier from the codelist referenced in the schema property. For example, with UNCEFACT, this is the value of the 'Common Code' column. From this identifier, applications can look-up the human readable name or symbol for this unit of measure.",
