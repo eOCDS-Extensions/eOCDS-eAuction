@@ -16,7 +16,7 @@
   },
   "definitions": {
     "Tender": {
-      "type":"object",
+      "type": "object",
       "properties": {
         "auctionPeriod": {
           "title": "Auction period",
